@@ -24,7 +24,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 px-4 bg-gray-50">
+    <section id="services" className="py-14 sm:py-20 px-3 sm:px-4 bg-gray-50">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,8 +32,8 @@ export default function Services() {
         transition={{ duration: 0.8 }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Hizmetler</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Hizmetler</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service) => (
             <div
               key={service.title}
@@ -41,7 +41,7 @@ export default function Services() {
               style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.10)" }}
             >
               <span>{service.icon}</span>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">{service.title}</h3>
             </div>
           ))}
         </div>
